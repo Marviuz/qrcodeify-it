@@ -1,1 +1,3 @@
-# QRCodeify It
+# [QRCodeify It](https://marcus-dc.github.io/qrcodeify-it/)
+
+Yet another QR Code generator...
