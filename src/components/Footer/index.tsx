@@ -16,8 +16,7 @@ export const Footer: FC<FooterProps> = ({ className, ...props }) => {
       <div>
         <div className="flex items-center justify-between text-white">
           <div className="flex gap-2">
-            {/* TODO: github link */}
-            <a href="#">
+            <a href="https://github.com/marcus-dc/qrcodeify-it">
               <AiFillGithub className="text-3xl" />
             </a>
           </div>
