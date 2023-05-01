@@ -14,7 +14,10 @@ export const Header: FC<HeaderProps> = ({ className, ...props }) => {
     >
       <div className="h-full">
         <div className="flex items-center w-full h-full text-white">
-          <div className="italic">QRCode-ify It!</div>
+          <div className="italic font-bold">
+            <span className="text-[#a4b6ef]">QRCode</span>
+            ify It!
+          </div>
         </div>
       </div>
     </header>
