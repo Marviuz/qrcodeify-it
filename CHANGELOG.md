@@ -1,5 +1,11 @@
 # qr-codeify-it
 
+## 0.1.2
+
+### Patch Changes
+
+- 91e6421: Modify title style and add description to app
+
 ## 0.1.1
 
 ### Patch Changes
