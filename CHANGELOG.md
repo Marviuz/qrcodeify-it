@@ -1,5 +1,12 @@
 # qr-codeify-it
 
+## 0.1.3
+
+### Patch Changes
+
+- 6c87128: add version to title
+- 60777d4: add basic SEO
+
 ## 0.1.2
 
 ### Patch Changes
