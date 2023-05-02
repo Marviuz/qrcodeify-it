@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import QRCode from 'qrcode';
 import { useEffect, useId, useState } from 'react';
@@ -24,6 +25,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>QRCodeify It!</title>
+      </Head>
       <Header />
       <main className="w-full">
         <div className="flex flex-col gap-2 mx-auto max-w-[1440px] w-full px-2 mt-7 mb-80">
