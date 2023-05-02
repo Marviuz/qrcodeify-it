@@ -1,9 +1,12 @@
+import getConfig from 'next/config';
 import { FC, HTMLProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export type HeaderProps = HTMLProps<HTMLDivElement> & {};
 
 export const Header: FC<HeaderProps> = ({ className, ...props }) => {
+  const { publicRuntimeConfig } = getConfig();
+
   return (
     <header
       className={twMerge(
@@ -16,7 +19,7 @@ export const Header: FC<HeaderProps> = ({ className, ...props }) => {
         <div className="flex items-center w-full h-full text-white">
           <div className="italic font-bold">
             <span className="text-[#a4b6ef]">QRCode</span>
-            ify It!
+            ify It! <sub>v{publicRuntimeConfig.version}</sub>
           </div>
         </div>
       </div>
