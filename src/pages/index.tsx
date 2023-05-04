@@ -1,27 +1,15 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import QRCode from 'qrcode';
-import { useEffect, useId, useState } from 'react';
-import { toast } from 'react-hot-toast';
+import { useId, useState } from 'react';
+import { useResizeDetector } from 'react-resize-detector';
 
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+import QR from '@/components/QRCode';
 
 export default function Home() {
   const [data, setData] = useState('');
-  const [qr, setQR] = useState('');
   const textAreaId = useId();
-
-  useEffect(() => {
-    if (data) {
-      QRCode.toDataURL(data)
-        .then(setQR)
-        .catch((error) => {
-          if (error instanceof Error) toast.error(error.message);
-          throw error;
-        });
-    }
-  }, [data]);
+  const { ref, ...sizes } = useResizeDetector();
 
   return (
     <>
@@ -46,14 +34,12 @@ export default function Home() {
               />
             </label>
             <div className="w-full md:max-w-[24rem] aspect-square grow-0">
-              <div className="relative w-full h-full overflow-hidden border border-gray-500 rounded-lg">
-                {qr && data ? (
-                  <Image
-                    src={qr}
-                    alt={`${data} QR Code`}
-                    fill
-                    className="object-contain w-full"
-                  />
+              <div
+                className="relative w-full h-full overflow-hidden border border-gray-500 rounded-lg"
+                ref={ref}
+              >
+                {data ? (
+                  <QR size={sizes} content={data} />
                 ) : (
                   <div className="flex items-center justify-center w-full h-full text-white">
                     No text, no QR.
