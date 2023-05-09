@@ -1,5 +1,11 @@
 # qr-codeify-it
 
+## 0.2.0
+
+### Minor Changes
+
+- 00a4640: change package for rendering qr and add options to change styling
+
 ## 0.1.3
 
 ### Patch Changes
