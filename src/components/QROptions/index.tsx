@@ -112,7 +112,7 @@ const QROptions: FC<QROptionsType> = ({ onChange, ...options }) => {
               }
             }}
           >
-            <div className="max-w-xs truncate">
+            <div className="truncate max-w-[200px]">
               {options.imageName ? options.imageName : 'Choose logo'}
             </div>
           </FileUploadButton>
