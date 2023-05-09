@@ -42,10 +42,7 @@ export default function Home() {
             </label>
             <QROptions {...options} onChange={setOptions} />
             <div className="w-full md:max-w-[24rem] aspect-square grow-0">
-              <div
-                className="relative w-full h-full overflow-hidden border border-gray-500 rounded-lg -z-10"
-                ref={ref}
-              >
+              <div className="relative w-full h-full" ref={ref}>
                 {data ? (
                   <QR
                     {...options}
