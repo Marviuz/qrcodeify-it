@@ -1,5 +1,11 @@
 # qr-codeify-it
 
+## 0.2.2
+
+### Patch Changes
+
+- e2eba7f: fix overlapping qr component and and change placeholder styles
+
 ## 0.2.1
 
 ### Patch Changes
