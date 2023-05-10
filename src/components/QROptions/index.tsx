@@ -67,8 +67,8 @@ const QROptions: FC<QROptionsType> = ({ onChange, ...options }) => {
               {({ checked }) => (
                 <div
                   className={twMerge(
-                    'w-full h-full transition text-white cursor-pointer uppercase border border-[#a4b6ef] px-4 py-1 rounded-full font-bold',
-                    checked ? 'bg-[#a4b6ef]' : 'hover:scale-105 active:scale-95'
+                    'w-full h-full transition text-white cursor-pointer uppercase border border-primary px-4 py-1 rounded-full font-bold',
+                    checked ? 'bg-primary' : 'hover:scale-105 active:scale-95'
                   )}
                 >
                   {type}
@@ -99,7 +99,7 @@ const QROptions: FC<QROptionsType> = ({ onChange, ...options }) => {
         <div className="flex gap-1">
           <FileUploadButton
             title={options.imageName}
-            className="bg-[#a4b6ef] rounded-full text-white w-full "
+            className="w-full text-white rounded-full bg-primary "
             type="file"
             accept="image/*"
             onChange={(evt) => {
@@ -118,7 +118,7 @@ const QROptions: FC<QROptionsType> = ({ onChange, ...options }) => {
           </FileUploadButton>
           {options.image && options.imageName && (
             <button
-              className="rounded-full bg-[#a4b6ef] shrink-0 h-8 w-8 flex justify-center items-center text-white hover:brightness-125 active:brightness-50"
+              className="flex items-center justify-center w-8 h-8 text-white rounded-full bg-primary shrink-0 hover:brightness-125 active:brightness-50"
               onClick={() => {
                 const clone = { ...options };
                 delete clone.image;

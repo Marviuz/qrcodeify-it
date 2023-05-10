@@ -35,7 +35,7 @@ const QR: FC<QRProps> = (props) => {
       {qrCode && (
         <button
           onClick={() => qrCode.download()}
-          className="bg-[#a4b6ef] mt-2 text-white flex items-center justify-center w-full gap-2 px-2 py-1 font-bold transition rounded outline-none cursor-pointer hover:brightness-125 active:brightness-50"
+          className="flex items-center justify-center w-full gap-2 px-2 py-1 mt-2 font-bold text-white transition rounded outline-none cursor-pointer bg-primary hover:brightness-125 active:brightness-50"
         >
           Download
         </button>
