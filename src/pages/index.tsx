@@ -42,7 +42,7 @@ export default function Home() {
             </label>
             <QROptions {...options} onChange={setOptions} />
             <div className="w-full md:max-w-[24rem] aspect-square grow-0">
-              <div className="relative w-full h-full" ref={ref}>
+              <div className="relative w-full h-full -z-10" ref={ref}>
                 {data ? (
                   <QR
                     {...options}
@@ -51,8 +51,8 @@ export default function Home() {
                     height={sizes.width}
                   />
                 ) : (
-                  <div className="flex items-center justify-center w-full h-full text-white">
-                    No text, no QR.
+                  <div className="flex items-center justify-center w-full h-full text-xl italic font-bold text-white border border-gray-500 rounded-lg">
+                    No text, no QR...
                   </div>
                 )}
               </div>
