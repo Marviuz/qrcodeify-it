@@ -1,5 +1,11 @@
 # qr-codeify-it
 
+## 0.2.3
+
+### Patch Changes
+
+- 13693ea: add color to tailwind config
+
 ## 0.2.2
 
 ### Patch Changes
