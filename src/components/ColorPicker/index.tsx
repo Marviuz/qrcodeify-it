@@ -39,6 +39,7 @@ const ColorPicker: FC<ColorPickerProps> = ({
       </Popover.Button>
 
       <Transition
+        className="absolute z-10"
         enter="transition duration-100 ease-out"
         enterFrom="transform scale-95 opacity-0"
         enterTo="transform scale-100 opacity-100"
@@ -46,7 +47,7 @@ const ColorPicker: FC<ColorPickerProps> = ({
         leaveFrom="transform scale-100 opacity-100"
         leaveTo="transform scale-95 opacity-0"
       >
-        <Popover.Panel className="absolute z-10">
+        <Popover.Panel>
           <HexColorPicker onChange={onChange} color={value} />
         </Popover.Panel>
       </Transition>
