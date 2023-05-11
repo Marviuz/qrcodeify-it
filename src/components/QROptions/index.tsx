@@ -33,7 +33,7 @@ const QROptions: FC<QROptionsType> = ({ onChange, ...options }) => {
       </div>
 
       <div>
-        <div className="font-semibold text-white">Dots</div>
+        <div className="font-semibold text-white">Bars</div>
         <ColorPicker
           className="w-full mt-1"
           value={options.dotsOptions?.color}
@@ -45,12 +45,12 @@ const QROptions: FC<QROptionsType> = ({ onChange, ...options }) => {
             }
           }}
         >
-          Background color
+          Bar color
         </ColorPicker>
       </div>
 
       <div>
-        <div className="font-semibold text-white">Dot type</div>
+        <div className="font-semibold text-white">Bar type</div>
         <RadioGroup
           className="flex flex-col gap-2 mt-1"
           value={options.dotsOptions?.type}
