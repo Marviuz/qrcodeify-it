@@ -1,5 +1,11 @@
 # qr-codeify-it
 
+## 0.2.4
+
+### Patch Changes
+
+- 0a3d60a: change words for semanticity(?)
+
 ## 0.2.3
 
 ### Patch Changes
